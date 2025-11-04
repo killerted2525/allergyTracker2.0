@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: food-allergy-tracker
+    env: node
+    plan: free
+    buildCommand: node build.js && npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false

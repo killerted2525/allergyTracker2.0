@@ -1,0 +1,19 @@
+ALL ACCOUNT CODE IN ONE FOLDER
+=================================
+
+This folder contains ALL the code for user accounts (login, register, logout).
+
+FILES:
+------
+1. backend-auth.ts      - Checks passwords, creates accounts (backend/kitchen)
+2. login-page.tsx       - The login screen users see (frontend/dining area)
+3. useAuth.ts           - Checks if someone is logged in (frontend)
+4. authUtils.ts         - Small helper code (frontend)
+
+HOW TO FIND THIS FOLDER:
+------------------------
+In the left sidebar, look for a folder called "auth" at the top level.
+
+TO DOWNLOAD:
+------------
+Right-click the "auth" folder → Download

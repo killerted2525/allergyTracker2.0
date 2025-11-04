@@ -1,0 +1,507 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(28, 14.3%, 11%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(207, 100%, 50%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222.2, 84%, 4.9%);
+  --radius: 0.75rem;
+
+  /* Apple-inspired colors */
+  --apple-blue: hsl(207, 100%, 50%);
+  --apple-green: hsl(142, 69%, 58%);
+  --apple-gray: hsl(240, 5%, 96%);
+  --apple-dark: hsl(0, 0%, 11%);
+  --apple-medium: hsl(0, 0%, 56%);
+  --apple-border: hsl(0, 0%, 78%);
+  --apple-red: hsl(4, 100%, 59%);
+  --apple-orange: hsl(33, 100%, 50%);
+  --apple-purple: hsl(248, 53%, 58%);
+  --apple-pink: hsl(322, 79%, 65%);
+  --apple-yellow: hsl(48, 100%, 67%);
+  --apple-indigo: hsl(239, 84%, 67%);
+  --apple-teal: hsl(178, 84%, 48%);
+  --apple-mint: hsl(162, 85%, 58%);
+  
+  /* Gradient backgrounds */
+  --gradient-primary: linear-gradient(135deg, hsl(207, 100%, 50%) 0%, hsl(248, 53%, 58%) 100%);
+  --gradient-success: linear-gradient(135deg, hsl(142, 69%, 58%) 0%, hsl(178, 84%, 48%) 100%);
+  --gradient-warning: linear-gradient(135deg, hsl(33, 100%, 50%) 0%, hsl(48, 100%, 67%) 100%);
+  --gradient-danger: linear-gradient(135deg, hsl(4, 100%, 59%) 0%, hsl(322, 79%, 65%) 100%);
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --primary: hsl(207, 100%, 50%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+/* PERFECT APP STYLES - APPLE-INSPIRED PERFECTION */
+
+/* Perfect glassmorphism effects */
+.apple-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Perfect shadows */
+.perfect-shadow {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1),
+              0 10px 20px -5px rgba(0, 0, 0, 0.04),
+              0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Perfect scanner buttons */
+.scanner-button {
+  background: linear-gradient(135deg, hsl(207, 100%, 50%) 0%, hsl(248, 53%, 58%) 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.scanner-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* Perfect calendar animations */
+.calendar-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calendar-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Perfect loading states */
+.perfect-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Perfect success animations */
+.success-bounce {
+  animation: successBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes successBounce {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Perfect mobile responsiveness */
+@media (max-width: 640px) {
+  .mobile-perfect {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Ensure proper mobile button sizing */
+  button {
+    min-height: 36px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  /* Mobile container improvements */
+  .max-w-7xl {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Fix mobile calendar grid */
+  .grid-cols-7 {
+    gap: 0.25rem !important;
+  }
+  
+  /* Mobile text sizing */
+  h2 {
+    font-size: 1rem !important;
+  }
+}
+
+/* Perfect app container */
+.perfect-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, hsl(var(--apple-gray)) 0%, rgba(240,244,248,0.8) 50%, rgba(248,250,252,0.9) 100%);
+}
+
+/* Perfect calendar grid */
+.perfect-calendar-grid {
+  display: grid;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Perfect completion animations */
+.completion-success {
+  animation: completionPulse 0.5s ease-out;
+}
+
+@keyframes completionPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); background-color: #10b981; }
+  100% { transform: scale(1); }
+}
+
+/* Perfect scanner overlay */
+.scanner-overlay {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Perfect performance optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Perfect accessibility */
+.focus-visible:focus {
+  outline: 2px solid hsl(207, 100%, 50%);
+  outline-offset: 2px;
+}
+
+/* Perfect loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'SF Pro Display', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .apple-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .apple-shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .calendar-day {
+    transition: all 0.2s ease;
+  }
+
+  .calendar-day:hover {
+    background: linear-gradient(135deg, hsl(var(--apple-gray)) 0%, rgba(255,255,255,0.8) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  /* Minecraft-style animations */
+  @keyframes minecraft-bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+      transform: translate3d(0, -8px, 0);
+    }
+    70% {
+      transform: translate3d(0, -4px, 0);
+    }
+    90% {
+      transform: translate3d(0, -2px, 0);
+    }
+  }
+
+  @keyframes minecraft-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 currentColor;
+    }
+    50% {
+      box-shadow: 0 0 20px 5px currentColor;
+    }
+  }
+
+  @keyframes minecraft-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes minecraft-shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(2px);
+    }
+  }
+
+  .minecraft-food-item {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .minecraft-food-item:hover {
+    animation: minecraft-bounce 0.6s ease-in-out;
+  }
+
+  .minecraft-food-item:active {
+    animation: minecraft-shake 0.5s ease-in-out;
+  }
+
+  .minecraft-food-card {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .minecraft-food-card:hover {
+    animation: minecraft-pulse 1s ease-in-out infinite;
+  }
+
+  .minecraft-color-dot {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .minecraft-color-dot:hover {
+    animation: minecraft-glow 1.5s ease-in-out infinite;
+  }
+
+  .minecraft-modal-dot {
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .minecraft-action-btn {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .minecraft-action-btn:hover {
+    animation: minecraft-pulse 1s ease-in-out infinite;
+  }
+
+  .minecraft-action-btn:active {
+    animation: minecraft-shake 0.3s ease-in-out;
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    .minecraft-food-item {
+      transition: all 0.2s ease-out;
+    }
+    
+    .minecraft-food-item:active {
+      transform: scale(1.1) translateY(-2px);
+      animation: minecraft-bounce 0.4s ease-out;
+    }
+    
+    .minecraft-food-card {
+      transition: all 0.3s ease-out;
+    }
+    
+    .minecraft-food-card:active {
+      transform: scale(1.03) translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    
+    .minecraft-color-dot:active {
+      transform: scale(1.2);
+      animation: minecraft-glow 0.5s ease-out;
+    }
+    
+    .minecraft-action-btn:active {
+      transform: scale(0.95);
+      animation: minecraft-shake 0.2s ease-out;
+    }
+    
+    .calendar-day:active {
+      transform: scale(1.02) translateY(-1px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+  }
+
+  /* Landscape orientation optimizations */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .mobile-landscape-compact {
+      padding: 2rem 1rem;
+    }
+    
+    .mobile-landscape-header {
+      margin-bottom: 1rem;
+    }
+    
+    .mobile-landscape-spacing {
+      gap: 0.5rem;
+    }
+    
+    .mobile-landscape-buttons {
+      height: 2.5rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+    }
+    
+    .mobile-landscape-text {
+      font-size: 0.75rem;
+    }
+    
+    .mobile-landscape-tips {
+      padding: 0.5rem;
+      margin-top: 1rem;
+    }
+    
+    .mobile-landscape-quick-actions {
+      padding: 0.75rem;
+      margin-top: 1rem;
+    }
+    
+    .mobile-landscape-floating {
+      bottom: 0.5rem;
+    }
+  }
+
+  /* Portrait orientation optimizations */
+  @media (max-width: 768px) and (orientation: portrait) {
+    .mobile-portrait-full-width {
+      width: 100%;
+    }
+    
+    .mobile-portrait-spacing {
+      gap: 0.75rem;
+    }
+    
+    .mobile-portrait-buttons {
+      min-height: 3rem;
+    }
+  }
+
+  /* Touch device optimization */
+  @media (hover: none) and (pointer: coarse) {
+    .minecraft-food-item:hover {
+      animation: none;
+    }
+    
+    .minecraft-food-card:hover {
+      animation: none;
+    }
+    
+    .minecraft-color-dot:hover {
+      animation: none;
+    }
+    
+    .minecraft-action-btn:hover {
+      animation: none;
+    }
+  }
+
+  .food-item {
+    transition: all 0.2s ease;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .food-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%);
+  }
+
+  .gradient-button {
+    background: var(--gradient-primary);
+    transition: all 0.3s ease;
+  }
+
+  .gradient-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .app-header {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.98) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Checkbox animations for completing foods */
+  .minecraft-checkbox {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  @media (hover: hover) {
+    .minecraft-checkbox:hover {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+    }
+  }
+
+  @media (hover: none) {
+    .minecraft-checkbox:active {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+      transition-duration: 0.15s;
+    }
+  }
+}
